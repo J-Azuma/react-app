@@ -1,11 +1,12 @@
 version: "3"
 services: 
   node:
+    container_name: react
     build:
       context: .
     volumes:
       - ./:/usr/src/app
-    command: sh -c "cd react-sample && yarn start"
+    command: sh -c "cd my-app && yarn start"
     ports: 
       - "3000:3000"
     stdin_open: true
